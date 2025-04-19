@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="title">Survey Form</h1>
+        <p id="description">This is a survey form for FreeCodeCamp</p>
+    </header>
+    <main>
+        <form id="survey-form">
+            <fieldset>
+                <label for="name" id="name-label">
+                    Your name:
+                    <input class="formcontrol" id="name" type="text" required placeholder="Enter Your Name">
+                </label>
+                <label for="email" id="email-label">
+                    Your email:
+                    <input class="formcontrol" id="email" type="email" required placeholder="Enter Your Email">
+                </label>
+                <label for="number" id="number-label">
+                    Your age (optional):
+                    <input class="formcontrol" id="number" type="number" min="13" max="120" placeholder="Enter Your Age">
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <p class="padded">
+                    Which button do you like the most?
+                </p>
+                <select id="dropdown" class="formcontrol">
+                    <option disabled selected>
+                        Select an option
+                    </option>
+                    <option value="one">
+                        This One
+                    </option>
+                    <option value="two">
+                        Maybe This One
+                    </option>
+                    <option value="three">
+                        This One is cool too
+                    </option>
+                </select>
+
+                <p class="padded">
+                    Which time of the day you like the most?
+                </p>
+                <label for="morning" id="radio-label">
+                    <input type="radio" name="radios" id="morning" value="morning">
+                    Morning
+                </label>
+                <label for="day" id="radio-label">
+                    <input type="radio" name="radios" id="day" value="day">
+                    Day
+                </label>
+                <label for="evening" id="radio-label">
+                    <input type="radio" name="radios" id="evening" value="evening">
+                    Evening
+                </label>
+                <label for="night" id="radio-label">
+                    <input type="radio" name="radios" id="night" value="night">
+                    Night
+                </label>
+
+                <p class="padded">
+                    Which game you like the most?
+                </p>
+                <label for="gd">
+                    <input type="checkbox" value="gd" name="checks" id="gd">
+                    Geometry Dash
+                </label>
+                <label for="tekken">
+                    <input type="checkbox" value="tekken" name="checks" id="tekken">
+                    Tekken
+                </label>
+                <label for="repo">
+                    <input type="checkbox" value="repo" name="checks" id="repo">
+                    R.E.P.O.
+                </label>
+                <label for="lc">
+                    <input type="checkbox" value="lc" name="checks" id="lc">
+                    Lethal Company
+                </label>
+                <label for="ultrakill">
+                    <input type="checkbox" value="ultrakill" name="checks" id="ultrakill">
+                    ULTRAKILL
+                </label>
+                <label for="gmod">
+                    <input type="checkbox" value="gmod" name="checks" id="gmod">
+                    Garrys Mod
+                </label>
+
+                <label for="info" id="textarea-label">
+                    <p class="padded">
+                        Any new ideas?
+                    </p>
+                    <textarea id="info" placeholder="Enter Your Comment Here:"></textarea>
+                </label>
+            </fieldset>
+
+            <button id="submit" type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>

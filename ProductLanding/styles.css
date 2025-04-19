@@ -1,0 +1,226 @@
+/* Root */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 1.6em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+:root{
+    --clr-bisque: hsl(31, 100%, 88%);
+    --clr-bisque2: hsl(42, 100%, 65%);
+    --clr-green: hsl(122, 100%, 95%);
+
+    --clr-black: black;
+    --clr-gray: rgb(230, 230, 230);
+    --clr-white: white;
+}
+ul{
+    list-style: none;
+}
+/* Main Rules */
+body{
+    width: 100%;
+    min-height: 100vh;
+}
+header{
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    top: 0;
+    height: max(10vh, fit-content);
+    width: 100%;
+    padding-inline: 15px;
+}
+main{
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 1rem;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+.nav-link{
+    color: var(--clr-white);
+    text-decoration: none;
+    margin-inline: 10px;
+}
+/* ID'S/Classes */
+#welcome,
+#services,
+#vid,
+#pricing,
+.form{
+    display: flex;
+}
+
+#welcome,
+#services,
+#vid{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#welcome{
+    background-image: linear-gradient(hsl(31, 100%, 88%, 0.9)), url(https://hips.hearstapps.com/hmg-prod/images/ver050124garawards-017-new-crop-661d67113e690.jpg?crop=1.00xw:0.751xh;0,0.0240xh&resize=1200:*);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    text-align: center;
+    min-height: max(90vh, 500px);
+}
+#vid{
+    background-color: var(--clr-green);
+    padding-block: 20px;
+    text-align: center;
+}
+#pricing{
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+}
+.form{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: max(20vh, fit-content);
+    font-size: 2rem;
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+}
+
+
+
+.service{
+    display: flex;
+    flex-direction: row;
+    margin-block: 40px;
+}
+iframe{
+    aspect-ratio: 16 / 9;
+    height: 300px;
+    border: none;
+}
+.option-container{
+    box-shadow: 0 0 4px 0 var(--clr-black);
+    border-radius: 15px;
+    text-align: center;
+    width: min(20vw, 300px);
+    min-width: 220px;
+    height: 350px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.select-button, input[type="submit"]{
+    border: none;
+    margin-block: 10px;
+    border-radius: 10px;
+    background-color: var(--clr-bisque2);
+    cursor: pointer;
+}
+.select-button{
+    width: 60%;
+    height: 10%;
+    align-self: center;
+    font-size: 1rem;    
+}
+input[type="submit"]{
+    height: 45px;
+    font-size: 0.8rem;
+    width: 150px;
+}
+input[type="email"]{
+    padding-inline: 5px;
+    padding-block: 2px;
+}
+
+#header-img{
+    display: block;
+    width: min(25vw,200px);
+}
+.service-icon{
+    width: 100px;
+    height: 100px;
+    align-self: center;
+    margin-inline: 20px;
+}
+
+.info{
+    background-color: var(--clr-gray);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.text{
+    max-width: 600px;
+    margin-inline: 20px;
+}
+#pricing li{
+    padding-block: 10px;
+    text-decoration: underline;
+}
+.no-wrap{
+    white-space: nowrap;
+}
+/* Transitions/Animations */
+.nav-link:hover{
+    color: hsl(0, 0%, 75%);
+    transition-property: color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+.nav-link:active{
+    color: hsl(0, 0%, 50%);
+    transition-property: color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+
+.select-button:hover, input[type="submit"]:hover{
+    background-color: hsl(42, 100%, 55%);
+    transition-property: background-color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+.select-button:active, input[type="submit"]:active{
+    background-color: hsl(42, 100%, 45%);
+    transition-property: background-color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+/* Media Queries */
+@media (max-width: 768px){
+    iframe{
+        height: 200px;
+    }
+    .nav-link{
+        font-size: 0.6rem;
+    }
+}
+@media (max-width: 425px){
+    iframe{
+        height: 125px;
+    }
+    nav{
+        display: none;
+    }
+    header{
+        justify-content: center;
+    }
+}

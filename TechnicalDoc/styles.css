@@ -1,0 +1,192 @@
+/* this code is messy, im sorry to myself for doing so */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 2px solid green; */
+}
+html{
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Main Elements */
+body{
+    display: grid;
+    grid-template-areas: 
+    "nav main"
+    "nav main";
+    grid-template-columns: 20% 80%;
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 85%);
+}
+nav{
+    position: fixed;
+    top: 0;
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+nav img{
+    width: max(80px, 5%);
+}
+article img{
+    width: min(600px, 80%);
+    display: block;
+    margin: 10px auto;
+    border: 10px solid hsla(216, 100%, 90%, 0.5);
+}
+
+/* Text Styling */
+nav header{
+    font-size: 1rem;
+    font-weight: 600;
+    padding-block: 20px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+nav ul{
+    list-style: none;
+    width: 100%;
+}
+nav li{
+    font-size: 1.5rem;
+    font-weight: 450;
+}
+nav li a{
+    padding-block: 25px;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+#main-doc header{
+    font-size: 2em;
+    font-weight: 550;
+    padding-block: 10px;
+}
+p{
+    padding-block: 5px; 
+    padding-left: 10px
+}
+article li{
+    padding-block: 10px;
+    padding-left: 30px;
+    list-style-position: inside;
+}
+code{
+    display: block;
+    background-color: hsla(216, 100%, 90%, 0.5);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 15px;
+    line-height: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.green{
+    color: hsl(120, 60%, 50%);
+}
+.orange{
+    color: hsl(39, 70%, 50%);
+}
+.light-blue{
+    color: hsl(198, 70%, 50%);
+}
+.blue{
+    color: hsl(240, 70%, 60%);
+}
+.purple{
+    color: hsl(300, 70%, 60%);
+}
+.bold{
+    font-weight: 550;
+}
+.code-padding{
+    padding-left: 20px; 
+}
+
+.odd-link{
+    background-color: hsl(0, 0%, 85%);
+}
+.even-link{
+    background-color: hsl(0, 0%, 95%);
+}
+
+.no-wrap{
+    white-space: nowrap;
+}
+/* Classes and IDs */
+#main-doc{
+    padding: 15px;
+    background-color: hsl(215, 100%, 97%);
+    border-left: 1px solid rgb(0, 0, 0);
+}
+/* Pseudo-Selectors */
+.even-link:hover{
+    background-color: hsl(0, 0%, 80%);
+    transition-property: background-color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+.odd-link:hover{
+    background-color: hsl(0, 0%, 70%);
+    transition-property: background-color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+
+.even-link:active{
+    background-color: hsl(0, 0%, 70%);
+    transition-property: background-color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+.odd-link:active{
+    background-color: hsl(0, 0%, 60%);
+    transition-property: background-color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+/* Media Queries */
+@media (max-width: 768px){
+    body{
+        display: grid;
+        grid-template-areas: 
+        "nav" 
+        "main";
+        grid-template-columns: 100%;
+    }
+    nav{
+        position: static;
+        width: 100%;
+        height: 100%;
+    }
+    nav ul{
+        height: 200px;
+        overflow-y: scroll;
+    }
+    #main-doc{
+        border-left: none;
+    }
+    nav li a{
+        padding-block: 10px;
+    }
+    nav header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    nav img, .headDiv{
+        margin-inline: 10px;
+    }
+}
+@media (max-height: 548px){
+    nav ul{
+        overflow-y: scroll;
+    }
+}

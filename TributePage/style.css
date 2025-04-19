@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 2px solid green; */
+}
+html{
+    font-size: 1.2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* Main Elements */
+main{
+    background-color: hsl(0, 0%, 80%);
+    text-align: center;
+}
+.header{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer{
+    text-align: center;
+    padding-block: 20px 10px; 
+    background-color: white;
+}
+/* Classes and ID's */
+#title{
+    background-color: hsl(12, 100%, 78%);
+    color: black;
+    letter-spacing: 2px;
+    padding-block: 5px;
+}
+#img-div{
+    background-color: hsl(0, 0%, 14%);
+    color: white;
+    padding-block: 10px;
+}
+#image{
+    display: block;
+    max-width: 100%;
+    width: min(100%, 700px);
+    height: auto;
+    margin: auto;
+}
+.bold{
+    font-weight: 600;
+}
+.padding{
+    padding-block: 20px;
+}

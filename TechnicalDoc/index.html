@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity Developer RoadMap</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar" style="grid-area: nav">
+        <header>
+            <img src="https://ih1.redbubble.net/image.786468378.5783/raf,360x360,075,t,fafafa:ca443f4786.jpg" alt="Unity Logo">
+            <div class="headDiv">
+                <span class="no-wrap">Unity</span> <span class="no-wrap">Game Development</span>
+                <br><span class="no-wrap">For Dummies</span>
+            </div></header>
+        <ul>
+            <li class="even-link"><a href="#Introduction" class="nav-link">Introduction</a></li>
+            <li class="odd-link"><a href="#Unity" class="nav-link">Unity</a></li>
+            <li class="even-link"><a href="#C#" class="nav-link">C#</a></li>
+            <li class="odd-link"><a href="#Where_to_start" class="nav-link">Where to start</a></li>
+            <li class="even-link"><a href="#Reference" class="nav-link">Reference</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc" style="grid-area: main">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p>Unity is a great tool for prototyping everything from games,
+                     to interactive visualisations. In this article,
+                      we run through all you need to know to get started using Unity.</p>
+                <p>This article is aimed at anyone who has never used Unity before, 
+                    but has some previous experience programming or in web design / development.
+                     By the end of this article, you should have a good general overview of the engine
+                      as well as all the necessary functions and code to start making a basic game.</p>
+                <p>Here are the most important things you have to learn before you get going:</p>
+                <ul>
+                    <li>
+                        <span class="bold">Unity Engine Interface</span> 
+                    </li>
+                    <li>
+                        <span class="bold">C# Programming Language</span>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Unity">
+            <header>Unity</header>
+            <article>
+                <p>Unity gives users the ability to create games and experiences
+                     in both 2D and 3D, and the engine offers a primary scripting API
+                      in C# using Mono, for both the Unity editor in the form of
+                       plugins, and games themselves, as well as drag and drop
+                        functionality.</p>
+                <p>Unity simplifies game development by using
+                    a component-based architecture, where scripts define behaviors
+                     for game objects within 2D or 3D environments. The Unity Editor
+                      offers a visual interface for designing games levels, where
+                       assets can be arranged to create scenes. Users can drag and
+                        drop assets into the editor, such as 3D models, textures, and
+                         audio files, and then arrange and configure them to create
+                          the desired gameplay experience. C# is the primary scripting language,
+                           supported by programming languages like Rust and JavaScript and a
+                            wide ecosystem of assets, prefabs, and templates to streamline development.</p>
+                <img src="https://architosh.com/wp-content/uploads/2017/07/Cinemachine.jpg" alt="Unity Interface">
+                <p>By far the most important things you need to know,
+                    before starting with game development, you need to understand these
+                    things about unity:</p>
+                <ul>
+                    <li>
+                        <span class="bold">Basics</span> (Unity Basics, C# Coding For Unity, Assets)
+                    </li>
+                    <li>
+                        <span class="bold">Visuals</span> (3D/2D Graphics, UI, Animations)
+                    </li>
+                    <li>
+                        <span class="bold">Gameplay</span> (Physics, AI, Multiplayer {Optional})
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="C#">
+            <header>C#</header>
+            <article>
+                <p>C# is a cross-platform general purpose language that makes
+                     developers productive while writing highly performant code.
+                      With millions of developers, C# is the most popular .NET 
+                      language. C# has broad support in the ecosystem and all 
+                      .NET workloads. Based on object-oriented principles, it 
+                      incorporates many features from other paradigms, not least
+                       functional programming. Low-level features support high-efficiency
+                        scenarios without writing unsafe code. Most of the .NET runtime
+                         and libraries are written in C#, and advances in C# often
+                          benefit all .NET developers.</p>
+
+                <p>The "Hello, World" program is traditionally used to
+                     introduce a programming language. Here it is in C#:</p>
+                <code><span class="green">// This line prints "Hello, World"</span> <br>
+                    <span class="light-blue">Console</span>.WriteLine(<span class="orange">"Hello, World"</span>);</code>
+                <p>A declaration statement declares a new local variable,
+                     local constant, or local reference variable. To declare
+                      a local variable, specify its type and provide its name.
+                       You can declare multiple variables of the same type in
+                        one statement, as the following example shows:</p>
+                <code><span class="blue">string</span> greeting; <br>
+                    <span class="blue">int</span> a, b, c; <br>
+                    <span class="blue">const string</span> Greeting = "Hello"; <br>
+                    <span class="blue">const double</span> MinLimit = -10.0;</code>
+                <p>Local functions are methods of a type that are nested in another member. They can only be called from their containing member</p>
+                <p>Local functions make the intent of your code clear. Anyone reading your code can see that the method isn't callable except by
+                     the containing method. For team projects, they also make it impossible for another developer to mistakenly call the method
+                      directly from elsewhere in the class or struct.</p>
+                <code><span class="blue">public static void</span> Main(){ <br>
+                    <span class="code-padding"><span class="light-blue">Console</span>.WriteLine(<span class="orange">"Hello"</span>);</span> <br>
+                    }</code>
+                <p>The if, if-else and switch statements select statements to execute from many possible paths
+                     based on the value of an expression. The if statement executes a statement only if a provided
+                      Boolean expression evaluates to true. The if-else statement allows you to choose which of
+                       the two code paths to follow based on a Boolean expression. The switch statement selects a
+                        statement list to execute based on a pattern match with an expression.</p>
+                <code><span class="purple">if</span> (<span class="blue">True</span>) { <br>
+                    <span class="code-padding"><span class="light-blue">Console</span>.WriteLine(<span class="orange">"True"</span>);</span> <br>
+                }</code>
+                <p>You can store multiple variables of the same type in an array data structure.
+                     You declare an array by specifying the type of its elements. If you want
+                      the array to store elements of any type, you can specify object as its type.
+                       In the unified type system of C#, all types, predefined and user-defined,
+                        reference types and value types, inherit directly or indirectly from Object.</p>
+                <code><span class="blue">int</span>[] numbers = <span class="light-blue">new</span> <span class="blue">int</span>[10]; <span class="green">// All values are 0</span> <br>
+                    <span class="blue">string</span>[] messages = <span class="light-blue">new</span> <span class="blue">string</span>[10]; <span class="green">// All values are null</span></code>
+
+                <p>Its not everything about C#, there are a lot more things for you to learn. These are just some of the basics, more can be found on
+                     <span class="no-wrap"><a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank">C# documentation</a></span> page</p>
+            </article>
+        </section>
+        <section class="main-section" id="Where_to_start">
+            <header>Where to start</header>
+            <article>
+                <p>The usual advice for learning game dev/Unity is to not jump into your dream game project.
+                    Make a handful of small games, increasingly complex, to apply the things you are learning.
+                     Not for release or anything, just projects that allow you to implement the things you are learning.
+                    This gives you some experience in conceptualizing, designing, and then developing a lot of the basic
+                     skills and techniques that you will need to start working on your big horror game. Jumping straight
+                      into working on your dream game as your first game project is probably the leading cause of people
+                       getting frustrated and quitting. Start small and master the basics.</p>
+                <p>Don't learn programming by starting with Unity, start with the language first, then patterns so you're not learning a tool (Unity)</p>
+                <p>Don't get stuck in tutorial hell, you'll grow to be very dependable on tutorials, which is not something you need to aim for. Try
+                    to create stuff on your own, and only depend on tutorials to learn something new.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <article>
+                <p>Here is a list of pages information was taken from:</p>
+            <ul>
+                <li>
+                    <a href="https://en.wikipedia.org/wiki/Unity_(game_engine)">Wikipedia</a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/the-ultimate-beginners-guide-to-game-development-in-unity-f9bfe972c2b5/">FreeCodeCamp</a>
+                </li>
+                <li>
+                    <a href="https://medium.com/@alinulken/unity-developer-roadmap-97108405a7dd">Unity Roadmap</a>
+                </li>
+                <li>
+                    <a href="https://www.pubnub.com/guides/unity/">Pubnub</a>
+                </li>
+                <li>
+                    <a href="https://learn.microsoft.com/en-us/dotnet/csharp/">Microsoft</a>
+                </li>
+            </ul>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
