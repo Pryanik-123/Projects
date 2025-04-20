@@ -8,7 +8,7 @@
 :root{
     --clr-orang: hsl(27, 100%, 65%);
     --clr-orang-2: hsl(27, 100%, 75%);
-    --clr-gray: black;
+    --clr-gray: hsl(0, 0%, 15%);
 
     --clr-black: black;
     --clr-white: white;
@@ -19,25 +19,23 @@ html{
 }
 
 /* Main Elements */
-body{
-}
 header{
-}
-main{
-}
-footer{
-}
-nav{
     background-color: var(--clr-orang);
     height: 7vh;
     width: 100%;
-
     display: flex;
     align-items: center;
     justify-content: flex-end;
     position: fixed;
     top: 0;
 }
+main{
+}
+footer{
+}
+
+
+
 nav a{
     font-size: 1rem;
     font-weight: 550;
