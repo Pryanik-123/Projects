@@ -1,0 +1,66 @@
+/* root */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 2px solid green; */
+}
+:root{
+    --clr-orang: hsl(27, 100%, 65%);
+    --clr-orang-2: hsl(27, 100%, 75%);
+    --clr-gray: black;
+
+    --clr-black: black;
+    --clr-white: white;
+}
+html{
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+}
+
+/* Main Elements */
+body{
+}
+header{
+}
+main{
+}
+footer{
+}
+nav{
+    background-color: var(--clr-orang);
+    height: 7vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+}
+nav a{
+    font-size: 1rem;
+    font-weight: 550;
+    margin-inline: 10px;
+}
+a{
+    color: var(--clr-black);
+    text-decoration: none;
+}
+
+/* Classes And Id's */
+#welcome-section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    font-size: 3rem;
+    background-color: var(--clr-gray);
+    color: var(--clr-white);
+}
+#welcome-section h4{
+    font-size: 1rem;
+    color: var(--clr-orang-2);
+}
