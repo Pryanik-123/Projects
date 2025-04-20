@@ -1,0 +1,7 @@
+make a better text on figures in about me
+do something about image width in about me maybe
+add the projects figures
+style future plans
+add the projects to github and link them
+media queries
+link my git profile
