@@ -6,9 +6,10 @@
     /* border: 2px solid green; */
 }
 :root{
-    --clr-orang: hsl(27, 100%, 65%);
-    --clr-orang-2: hsl(27, 100%, 75%);
-    --clr-gray: hsl(0, 0%, 15%);
+    --clr-yellow: hsl(60, 100%, 65%);
+    --clr-yellow-2: hsl(60, 100%, 75%);
+    --clr-gray: hsl(0, 0%, 17%);
+    --clr-gray-2: hsl(0, 0%, 90%);
 
     --clr-black: black;
     --clr-white: white;
@@ -20,7 +21,7 @@ html{
 
 /* Main Elements */
 header{
-    background-color: var(--clr-orang);
+    background-color: var(--clr-yellow);
     height: 7vh;
     width: 100%;
     display: flex;
@@ -29,13 +30,20 @@ header{
     position: fixed;
     top: 0;
 }
-main{
-}
 footer{
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+    padding-block: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
-
+footer a{
+    color: var(--clr-white)
+}
 nav a{
     font-size: 1rem;
     font-weight: 550;
@@ -58,7 +66,46 @@ a{
     background-color: var(--clr-gray);
     color: var(--clr-white);
 }
+#about{
+    padding-block: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#projects{
+    padding-block: 20px;
+    text-align: center;
+    background-color: var(--clr-gray-2);
+}
+
+
+#profile-link{
+    display: block;
+    color: var(--clr-black);
+    width: max-content;
+    margin-block: 10px;
+    padding: 10px;
+    background-color: var(--clr-yellow);
+    font-weight: 550;
+}
+.logo{
+    width: 250px;
+    height: 250px;
+}
+.skill{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.skills{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+}
 #welcome-section h4{
     font-size: 1rem;
-    color: var(--clr-orang-2);
+    color: var(--clr-yellow-2);
 }
