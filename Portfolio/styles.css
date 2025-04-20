@@ -63,7 +63,8 @@ a{
     flex-direction: column;
 
     font-size: 3rem;
-    background-color: var(--clr-gray);
+    /* background-color: var(--clr-gray); */
+    background: linear-gradient(135deg, var(--clr-gray) 50%, hsl(0, 0%, 25%));
     color: var(--clr-white);
 }
 #about{
