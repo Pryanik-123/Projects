@@ -73,14 +73,35 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    font-size: 1.3rem;
 }
 #projects{
     padding-block: 20px;
     text-align: center;
     background-color: var(--clr-gray-2);
 }
+#future{
+    padding-block: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 
+#future div{
+    width: 60vw;
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-items: center;
+}
+#future img{
+    width: min(220px, 20vw)
+}
 #profile-link{
     display: block;
     color: var(--clr-black);
@@ -91,20 +112,22 @@ a{
     font-weight: 550;
 }
 .logo{
-    width: 250px;
-    height: 250px;
+    width: min(250px, 20vw);
+    height: min(250px, 20vw);
 }
 .skill{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 .skills{
     display: grid;
     align-items: center;
     justify-items: center;
     grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
 }
 #welcome-section h4{
     font-size: 1rem;
