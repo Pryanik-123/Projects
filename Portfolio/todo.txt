@@ -1,2 +1,2 @@
 add the projects to github and link them
-media queries
+some hovers and transitions
