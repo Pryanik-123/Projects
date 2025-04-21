@@ -1,0 +1,1 @@
+limit the content size of the aside

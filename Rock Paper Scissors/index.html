@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="popUp isClosed">
+        <div class="panel">
+            <p class="versus" style="font-size: 10rem"></p>
+            <p class="result"></p>
+            <button class="close" onclick="closePopUp()">x</button>
+        </div>
+    </div>
+
+    <header style="grid-area: hd">
+        <h1>Paper Scissors Rock</h1>
+    </header>
+    <main style="grid-area: mn">
+        <button class="pick paper" onclick="picker('paper')" style="grid-area: pap">
+                📄
+        </button>
+        <button class="pick scissors" onclick="picker('scissors')" style="grid-area: sci">
+                ✂️
+        </button>
+        <button class="pick rock" onclick="picker('rock')" style="grid-area: roc">
+                🪨
+        </button>
+        <div class="ButtonsDiv" style="grid-area: res">
+            <p class="scoreStat ignored" style="font-size: 1.2rem">Hello World</p>
+            <button class="DivButton" onclick="Reset()">
+                Reset Score
+            </button>
+            <button class="DivButton autoPlay">
+                Auto-Play
+            </button>
+        </div>
+    </main>
+    <footer style="grid-area: ft">
+        <h2>&copy;Pryanik123</h2>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

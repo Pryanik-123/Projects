@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Flip</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header style="grid-area: hd">
+        <h1>Flip The Coin</h1>
+    </header>
+    <main style="grid-area: mn">
+        <a class="coin" style="grid-area: coin" onclick="Play(Math.random())">
+            <img class="image headsCoin" src="images/Heads.png" alt="" width="350">
+            <img class="image tailsCoin closed" src="images/tails.png" alt="" width="350">
+        </a>
+        <p class="result" style="grid-area: res; text-align: center;">
+            Coin
+        </p>
+        <div class="streak" style="grid-area: str">
+            <h2 style="grid-area: streak">Streaks</h2>
+            <img style="grid-area: head" class="StreakCoin" src="images/TailsGray.png" alt="" width="200">
+            <img style="grid-area: tail" class="StreakCoin" src="images/HeadsGray.png" alt="" width="200">
+            <p class="Tails">
+                0
+            </p>
+            <p class="Heads">
+                0
+            </p>
+        </div>
+        <div class="sidebar" style="grid-area: bar">
+            <img class="sideCoin" src="images/Tails.png" style="opacity:0" alt="">
+        </div>
+    </main>
+    <footer style="grid-area: ft;">
+        <h2>&copy;Pryanik123</h2>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header style="grid-area: hd">
+        <h1>The Calc of Lator</h1>
+        <p style="font-size: 0.6rem">(Purpose of this project is the calculator itself, please ignore some of the size bugs i was just worn out to fix them)</p>
+    </header>
+    <main style="grid-area: mn">
+        <div class="contain">
+            <div class="calculator">
+                <div class="input prompt" style="grid-area: prompt">
+                    <div class="numbers">
+                        <p class="calculation top"></p>
+                        <p class="result bottom"></p>
+                    </div>
+                </div>
+                <button class="input calc one" style="grid-area: one" onclick="AddSymbol('1')">
+                    1
+                </button>
+                <button class="input calc two" style="grid-area: two" onclick="AddSymbol('2')">
+                    2
+                </button>
+                <button class="input calc three" style="grid-area: three" onclick="AddSymbol('3')">
+                    3
+                </button>
+                <button class="input calc four" style="grid-area: four" onclick="AddSymbol('4')">
+                    4
+                </button>
+                <button class="input calc five" style="grid-area: five" onclick="AddSymbol('5')">
+                    5
+                </button>
+                <button class="input calc six" style="grid-area: six" onclick="AddSymbol('6')">
+                    6
+                </button>
+                <button class="input calc seven" style="grid-area: seven" onclick="AddSymbol('7')">
+                    7
+                </button>
+                <button class="input calc eight" style="grid-area: eight" onclick="AddSymbol('8')">
+                    8
+                </button>
+                <button class="input calc nine" style="grid-area: nine" onclick="AddSymbol('9')">
+                    9
+                </button>
+                <button class="input calc zero" style="grid-area: zero" onclick="AddSymbol('0')">
+                    0
+                </button>
+                <button class="input HistoryReset" style="grid-area: percent" onclick="HistoryReset()">
+                    <img src="Images/reset.png" alt="" width="20">
+                </button>
+                <button class="input calc point" style="grid-area: point" onclick="AddSymbol('.')">
+                    ,
+                </button>
+                <button class="input calc delete" style="grid-area: delete" onclick="ResetPrompt('', '', false)">
+                    C
+                </button>
+                <button class="input calc problem divide" style="grid-area: divide" onclick="AddSymbol('/')">
+                    /
+                </button>
+                <button class="input calc problem times" style="grid-area: times" onclick="AddSymbol('*')">
+                    X
+                </button>
+                <button class="input calc problem minus" style="grid-area: minus" onclick="AddSymbol('-')">
+                    -
+                </button>
+                <button class="input calc problem plus" style="grid-area: plus" onclick="AddSymbol('+')">
+                    +
+                </button>
+                <button class="input calc problem equals" style="grid-area: equals" onclick="Count()">
+                    =
+                </button>
+                <button class="input calc remove" style="grid-area: remove" onclick="RemoveSymbol()">
+                    &leftarrow;
+                </button>
+            </div>
+        </div>
+    </main>
+    <aside style="grid-area: as">
+        <div class="aside">
+            
+        </div>
+    </aside>
+    <footer style="grid-area: ft">
+        <h2>&copy;Pryanik123</h2>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

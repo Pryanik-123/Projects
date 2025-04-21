@@ -1,0 +1,230 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 1.5rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+:root{
+    --clr-green-tone1: hsl(120, 90%, 65%);
+
+    --clr-gray-tone1: hsl(0, 0%, 60%);
+    --clr-gray-tone2: hsl(0, 0%, 90%);
+
+    --clr-white: white;
+    --clr-black: black;
+}
+
+/* Main Elements */
+body, main{
+    display: grid;
+}
+header, footer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background-color: var(--clr-gray-tone2);
+    grid-template-areas: 
+    "hd"
+    "mn"
+    "ft";
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 1fr 10%;
+    min-height: 100vh;
+    gap: 0.5rem;
+}
+
+header{
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+}
+main{
+    grid-template-areas: 
+    "coin str"
+    "res str"
+    "bar bar";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5% 25%;
+}
+footer{
+    background-color: var(--clr-green-tone1);
+}
+
+/* Classes */
+.coin, .sidebar, .streak{
+    align-self: center;
+    justify-self: center;
+}
+.sidebar, .streak{
+    background-color: var(--clr-gray-tone1);
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.7);
+}
+
+.coin{
+    user-select: none;
+}
+
+.sidebar{
+    width: 80%;
+    height: 80%;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+.sideCoin{
+    margin-inline: 10px;
+    width: 8%;
+    height: auto;
+    opacity: 50%;
+}
+
+.sideCoin:last-child{
+    animation: coinGrow .4s;
+    opacity: 100%;
+}
+
+.streak{
+    width: 80%;
+    height: fit-content;
+    font-size: 1.4rem;
+
+    display: grid;
+    grid-template-areas:
+    "streak streak" 
+    "head tail"
+    "count count";
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+.StreakCoin{
+    width: 60%;
+}
+
+/* Conditions */
+.closed{
+    display: none;
+}
+.pause{
+    pointer-events: none;
+}
+
+.fadeOut, .fadeIn{
+    transition-property: opacity;
+    transition-duration: .4s;
+    transition-timing-function: ease;
+}
+.SideSwap{
+    transform: rotateY(180deg);
+}
+.fadeOut{
+    opacity: 0%;
+}
+.fadeIn{
+    opacity: 100%;
+}
+
+.OptionSame{
+    animation: OneToOne 1.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.OptionOpposite{
+    animation: OneToTwo 1.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.OptionSameSwap{
+    animation: OneToOneSwap 1.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.OptionOppositeSwap{
+    animation: OneToTwoSwap 1.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+/* Animations */
+@keyframes OneToOne{
+    100%{
+        transform: rotateY(720deg);
+    }
+}
+@keyframes OneToTwo{
+    100%{
+        transform: rotateY(540deg);
+    }
+}
+
+@keyframes OneToOneSwap{
+    0%{
+        transform: rotateY(180deg);
+    }
+    100%{
+        transform: rotateY(900deg);
+    }
+}
+@keyframes OneToTwoSwap{
+    0%{
+        transform: rotateY(180deg);
+    }
+    100%{
+        transform: rotateY(720deg);
+    }
+}
+
+@keyframes coinGrow {
+    from{
+        transform: scale(20%);
+    }
+    to{
+        transform: scale(100%);
+    }
+}
+
+/* Media Queries */
+
+@media (max-height: 660px) {
+    main{
+        grid-template-areas: 
+        "coin str"
+        "res bar";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 15%;
+        gap: 0.4rem;
+    }
+    body{
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .image{
+        width: 200px;
+    }
+    html{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    main{
+        grid-template-areas: 
+        "coin"
+        "res"
+        "str"
+        "bar";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 5% 1fr 10%;
+        gap: 0.4rem;
+    }
+}
