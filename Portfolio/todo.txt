@@ -1,4 +1,3 @@
 add the projects figures
 add the projects to github and link them
 media queries
-link my git profile
