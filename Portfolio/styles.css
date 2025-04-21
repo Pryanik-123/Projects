@@ -9,7 +9,8 @@
     --clr-yellow: hsl(60, 100%, 65%);
     --clr-yellow-2: hsl(60, 100%, 75%);
     --clr-gray: hsl(0, 0%, 17%);
-    --clr-gray-2: hsl(0, 0%, 90%);
+    --clr-gray-2: hsl(0, 0%, 25%);
+    --clr-gray-3: hsl(0, 0%, 90%);
 
     --clr-black: black;
     --clr-white: white;
@@ -17,6 +18,7 @@
 html{
     font-family: Arial, sans-serif;
     font-size: 1em;
+    scroll-behavior: smooth;
 }
 
 /* Main Elements */
@@ -63,8 +65,7 @@ a{
     flex-direction: column;
 
     font-size: 3rem;
-    /* background-color: var(--clr-gray); */
-    background: linear-gradient(135deg, var(--clr-gray) 50%, hsl(0, 0%, 25%));
+    background: linear-gradient(-135deg, var(--clr-gray) 25%, hsl(0, 0%, 25%));
     color: var(--clr-white);
 }
 #about{
@@ -77,9 +78,23 @@ a{
     font-size: 1.3rem;
 }
 #projects{
-    padding-block: 20px;
     text-align: center;
-    background-color: var(--clr-gray-2);
+    background-color: var(--clr-gray-3);
+}
+.projects-grid{
+    display: grid;
+    width: 70vw;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+.projects-grid-personal{
+    display: grid;
+    width: 70vw;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 20px;
 }
 #future{
     padding-block: 20px;
@@ -90,6 +105,32 @@ a{
 }
 
 
+.project{
+    margin-inline: 20px;
+    display: grid;
+    grid-template-rows: 85% 15%;
+    align-items: center;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+.project figcaption{
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-gray-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+.project a{
+    color: var(--clr-white);
+}
+.project img{
+    width: 100%;
+    height: 100%;
+}
+#projects h2{
+    padding-block: 20px;
+}
 #future div{
     width: 60vw;
     padding-top: 10px;
@@ -132,4 +173,7 @@ a{
 #welcome-section h4{
     font-size: 1rem;
     color: var(--clr-yellow-2);
+}
+a[href="https://www.freecodecamp.org/learn"]{
+    text-decoration: underline;
 }
