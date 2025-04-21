@@ -184,6 +184,43 @@ li{
 a[href="https://www.freecodecamp.org/learn"]{
     text-decoration: underline;
 }
+/* Conditions */
+nav a:hover{
+    color: rgb(160, 160, 160);
+    transition-property: color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+nav a:active{
+    color: rgb(240, 240, 240);
+    transition-property: color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+.project-title a:hover{
+    color: rgb(200, 200, 200);
+    transition-property: color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+.project-title a:active{
+    color: rgb(120, 120, 120);
+    transition-property: color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+#profile-link:hover{
+    background-color: hsl(60, 100%, 40%);
+    transition-property: background-color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+#profile-link:active{
+    background-color: hsl(60, 100%, 30%);
+    transition-property: background-color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
 /* Media Queries */
 @media (max-width: 1024px){
     .projects-grid-personal .project figcaption{
